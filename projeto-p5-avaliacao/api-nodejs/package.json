@@ -1,0 +1,15 @@
+{
+  "name": "api-gestao-clientes",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "ws": "node ws-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "amqplib": "^0.10.3",
+    "ws": "^8.14.2"
+  }
+}
