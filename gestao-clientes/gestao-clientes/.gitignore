@@ -1,6 +1,4 @@
 node_modules/
-.expo/
-build/
 dist/
+.expo/
 *.log
-.DS_Store

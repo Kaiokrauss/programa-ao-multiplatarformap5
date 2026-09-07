@@ -1,8 +1,0 @@
-{
-  "expo": {
-    "name": "Gestão Clientes",
-    "slug": "gestao-clientes",
-    "version": "1.0.0",
-    "platforms": ["ios", "android"]
-  }
-}

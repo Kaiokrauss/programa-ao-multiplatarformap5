@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Gestão de Clientes",
+    "slug": "gestao-clientes-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#f6f4ee"
+    },
+    "android": {
+      "package": "com.gestaoclientes.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.gestaoclientes.app"
+    }
+  }
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --tinta: #1b2a2e;
+  --tinta-suave: #45585c;
+  --papel: #f6f4ee;
+  --papel-painel: #ffffff;
+  --linha: #d8d2c4;
+  --acento: #2f6f5e;
+  --acento-escuro: #1f4c40;
+  --alerta: #a3402f;
+  --fonte-titulo: 'Source Serif 4', Georgia, serif;
+  --fonte-corpo: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fonte-corpo);
+}
+
+.pagina {
+  min-height: 100vh;
+}
+
+.cabecalho {
+  border-bottom: 2px solid var(--tinta);
+  background: var(--papel);
+}
+
+.cabecalho-conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 1.75rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.marca-indice {
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+  border-radius: 50%;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cabecalho h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.cabecalho p {
+  margin: 0.35rem 0 0;
+  color: var(--tinta-suave);
+  font-size: 0.95rem;
+}
+
+.conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aviso {
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--acento);
+  background: #eaf2ee;
+  font-size: 0.92rem;
+}
+
+.aviso-erro {
+  border-left-color: var(--alerta);
+  background: #f7eae7;
+  color: var(--alerta);
+}
+
+.painel {
+  background: var(--papel-painel);
+  border: 1px solid var(--linha);
+  padding: 1.75rem;
+}
+
+.painel h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem 1.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-largo {
+  grid-column: 1 / -1;
+}
+
+.campo label {
+  font-size: 0.82rem;
+  color: var(--tinta-suave);
+}
+
+.campo input,
+.campo select,
+.busca input {
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--linha);
+  background: var(--papel);
+  color: var(--tinta);
+}
+
+.campo input:focus,
+.campo select:focus,
+.busca input:focus {
+  outline: 2px solid var(--acento);
+  outline-offset: 1px;
+}
+
+.acoes-formulario {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.botao {
+  font-family: var(--fonte-corpo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 1.3rem;
+  border: 1px solid var(--tinta);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.botao-principal {
+  background: var(--acento-escuro);
+  border-color: var(--acento-escuro);
+  color: #fff;
+}
+
+.botao-principal:hover {
+  background: var(--acento);
+  border-color: var(--acento);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--tinta);
+}
+
+.botao-secundario:hover {
+  background: var(--tinta);
+  color: #fff;
+}
+
+.lista-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.lista-cabecalho h2 {
+  margin: 0;
+}
+
+.busca {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.busca input {
+  width: 9rem;
+}
+
+.estado-vazio {
+  color: var(--tinta-suave);
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabela th {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 2px solid var(--tinta);
+  color: var(--tinta-suave);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.tabela td {
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.acoes-tabela {
+  display: flex;
+  gap: 0.9rem;
+  white-space: nowrap;
+}
+
+.link-acao {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--acento-escuro);
+  font-size: 0.87rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--fonte-corpo);
+}
+
+.link-acao-perigo {
+  color: var(--alerta);
+}
+
+@media (max-width: 640px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+  .campo-largo {
+    grid-column: auto;
+  }
+}
